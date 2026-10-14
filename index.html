@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101323">
+  <title>ConnectLive — Meet Someone New</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> ConnectLive</a>
+    <div class="top-actions">
+      <span class="test-pill">TEST MODE</span>
+      <button id="langBtn" class="btn btn-ghost" type="button">हिन्दी</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span><span data-en="LIVE · RANDOM VIDEO CHAT" data-hi="लाइव · रैंडम वीडियो चैट">LIVE · RANDOM VIDEO CHAT</span></div>
+        <h1 data-en="A new face. A new conversation." data-hi="नया चेहरा। नई बातचीत।">A new face. A new conversation.</h1>
+        <p data-en="Meet people through spontaneous, one-to-one video conversations. Be kind, stay safe, and end any call whenever you want." data-hi="लाइव वीडियो बातचीत के ज़रिए नए लोगों से मिलें। सम्मान से बात करें, सुरक्षित रहें और जब चाहें कॉल बंद करें।">Meet people through spontaneous, one-to-one video conversations. Be kind, stay safe, and end any call whenever you want.</p>
+        <div class="hero-points">
+          <span>✓ <span data-en="Private 1-to-1 calls" data-hi="प्राइवेट 1-टू-1 कॉल">Private 1-to-1 calls</span></span>
+          <span>✓ <span data-en="Report & block controls" data-hi="रिपोर्ट और ब्लॉक सुविधा">Report & block controls</span></span>
+          <span>✓ <span data-en="Transparent test transactions" data-hi="पारदर्शी टेस्ट ट्रांज़ैक्शन">Transparent test transactions</span></span>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-top"><span class="price-icon">↗</span><span data-en="ONE-TIME ACCESS" data-hi="एक बार की फीस">ONE-TIME ACCESS</span></div>
+        <div class="price">₹1,000<span data-en=" / once" data-hi=" / एक बार"> / once</span></div>
+        <p data-en="Prototype access fee — simulated only, no real money is collected." data-hi="प्रोटोटाइप एक्सेस फीस — केवल सिमुलेशन, असली पैसा नहीं लिया जाएगा।">Prototype access fee — simulated only, no real money is collected.</p>
+        <button id="payBtn" class="btn btn-primary full" type="button" data-en="Try test payment" data-hi="टेस्ट पेमेंट करें">Try test payment</button>
+        <div class="secure-note">♢ <span data-en="Payment gateway is not connected" data-hi="पेमेंट गेटवे अभी कनेक्ट नहीं है">Payment gateway is not connected</span></div>
+        <div id="paymentStatus" class="status" role="status"></div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="section-head">
+        <div><div class="eyebrow" data-en="YOUR SPACE" data-hi="आपकी जगह">YOUR SPACE</div><h2 data-en="Ready to connect?" data-hi="कनेक्ट करने के लिए तैयार?">Ready to connect?</h2></div>
+        <span id="accessBadge" class="access-badge">🔒 <span data-en="Access locked" data-hi="एक्सेस लॉक है">Access locked</span></span>
+      </div>
+      <div class="video-grid">
+        <div class="video-panel remote-panel">
+          <video id="remoteVideo" autoplay playsinline></video>
+          <div id="remotePlaceholder" class="video-placeholder"><div class="avatar">✧</div><strong data-en="Your next conversation" data-hi="आपकी अगली बातचीत">Your next conversation</strong><span id="callStatus" data-en="Pay in test mode to unlock the demo" data-hi="डेमो खोलने के लिए टेस्ट पेमेंट करें">Pay in test mode to unlock the demo</span></div>
+          <span class="video-label" data-en="STRANGER" data-hi="अजनबी">STRANGER</span>
+        </div>
+        <div class="video-panel local-panel">
+          <video id="localVideo" autoplay muted playsinline></video>
+          <div id="localPlaceholder" class="video-placeholder"><div class="avatar">◉</div><strong data-en="Your camera" data-hi="आपका कैमरा">Your camera</strong><span data-en="Camera starts only when you choose to connect" data-hi="कैमरा तभी शुरू होगा जब आप कनेक्ट चुनेंगे">Camera starts only when you choose to connect</span></div>
+          <span class="video-label" data-en="YOU" data-hi="आप">YOU</span>
+        </div>
+      </div>
+      <div class="call-controls">
+        <button id="findBtn" class="btn btn-primary" type="button" disabled>⌁ <span data-en="Find someone" data-hi="किसी से जुड़ें">Find someone</span></button>
+        <button id="nextBtn" class="btn btn-secondary" type="button" disabled>↻ <span data-en="Next" data-hi="अगला">Next</span></button>
+        <button id="muteBtn" class="btn btn-secondary" type="button" disabled>♬ <span data-en="Mute" data-hi="माइक बंद">Mute</span></button>
+        <button id="endBtn" class="btn btn-danger" type="button" disabled>■ <span data-en="End call" data-hi="कॉल बंद करें">End call</span></button>
+      </div>
+      <div class="safety-row">
+        <div><strong data-en="Keep it respectful" data-hi="सम्मान बनाए रखें">Keep it respectful</strong><p data-en="Never share passwords, payment PINs, or sensitive personal details." data-hi="पासवर्ड, पेमेंट PIN या संवेदनशील निजी जानकारी साझा न करें।">Never share passwords, payment PINs, or sensitive personal details.</p></div>
+        <div class="safety-actions"><button id="reportBtn" class="btn btn-ghost" type="button" disabled>⚑ <span data-en="Report" data-hi="रिपोर्ट">Report</span></button><button id="blockBtn" class="btn btn-ghost" type="button" disabled>⊘ <span data-en="Block" data-hi="ब्लॉक">Block</span></button></div>
+      </div>
+    </section>
+
+    <section class="transactions">
+      <div class="section-head"><div><div class="eyebrow" data-en="DEMO RECORDS" data-hi="डेमो रिकॉर्ड">DEMO RECORDS</div><h2 data-en="Transaction history" data-hi="ट्रांज़ैक्शन हिस्ट्री">Transaction history</h2></div><button id="exportBtn" class="btn btn-ghost" type="button">↓ <span data-en="Export CSV" data-hi="CSV डाउनलोड">Export CSV</span></button></div>
+      <div class="table-wrap"><table><thead><tr><th data-en="Transaction ID" data-hi="ट्रांज़ैक्शन ID">Transaction ID</th><th data-en="Date" data-hi="तारीख">Date</th><th data-en="Amount" data-hi="राशि">Amount</th><th data-en="Status" data-hi="स्थिति">Status</th><th data-en="Mode" data-hi="मोड">Mode</th></tr></thead><tbody id="transactionRows"><tr><td colspan="5" class="empty" data-en="No demo transactions yet." data-hi="अभी कोई डेमो ट्रांज़ैक्शन नहीं है।">No demo transactions yet.</td></tr></tbody></table></div>
+      <p class="fine-print" data-en="Prototype note: records are stored only in this browser. This is not a real payment ledger and does not send money to any bank account." data-hi="प्रोटोटाइप नोट: रिकॉर्ड केवल इसी ब्राउज़र में सेव हैं। यह असली पेमेंट लेजर नहीं है और किसी बैंक खाते में पैसा नहीं भेजता।">Prototype note: records are stored only in this browser. This is not a real payment ledger and does not send money to any bank account.</p>
+    </section>
+  </main>
+  <footer><span>© 2026 ConnectLive Prototype</span><span data-en="Built for testing · Not for public launch" data-hi="टेस्टिंग के लिए · पब्लिक लॉन्च के लिए नहीं">Built for testing · Not for public launch</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>

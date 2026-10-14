@@ -1,0 +1,9 @@
+{
+  "name": "connectlive-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ConnectLive random video chat prototype with test-only payments",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "ws": "^8.18.0" }
+}
