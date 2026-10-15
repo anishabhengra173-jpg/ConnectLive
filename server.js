@@ -4,7 +4,7 @@ const path = require("path");
 const { WebSocketServer, WebSocket } = require("ws");
 
 const PORT = process.env.PORT || 3000;
-const PUBLIC = _dirname;
+const PUBLIC = __dirname;
 const server = http.createServer((req, res) => {
   const pathname = decodeURIComponent(new URL(req.url, "http://localhost").pathname);
   const requested = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
